@@ -14,101 +14,53 @@
 *
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 :root {
-    --background-primary: white;
-    --background-secondary: '';
-    --background-tertiary: #dbeafe;
-    --background-accent: '';
-    --background-compliment: '';
-    --background-gradient: '';
-    --background-muted: #f8fafc;
+    --background-primary: #fff5e1; /* Cream */
+    --background-secondary: #e7d3b3; /* Lighter cream for secondary background */
+    --background-tertiary: #d9c7af; /* Even lighter cream for tertiary background */
+    --background-accent: #ffede6; /* Neutral nude pink for accents */
+    --background-muted: #f4efe9; /* Muted cream for background elements */
 
-    --color-primary: #030615;
-    --color-secondary: '';
-    --color-tertiary: '';
-    --color-accent: '';
-    --color-compliment: '';
-    --color-gradient: '';
-    --color-muted: ;
-    --color-link: #2563eb;
-    --color-link-transparent: rgba(37, 99, 235, 0.1);
+    --color-primary: #5a3e36; /* Deep brown for primary text */
+    --color-secondary: #7d5e54; /* Medium brown for secondary text */
+    --color-tertiary: #a38574; /* Lighter brown for tertiary text */
+    --color-accent: #ff7f7f; /* Nude pink accent */
+    --color-link: #d95d67; /* Nude pink for links */
+    --color-link-transparent: rgba(217, 93, 103, 0.1); /* Transparent pink */
 
-    --color-success: '';
-    --color-warning: '';
-    --color-error: '';
-    --color-info: '';
-    --color-highlight: #fef9c3;
+    --color-highlight: #ffcccb; /* Light pink for highlight */
+    --gradient-start: #ffcccb; /* Pink gradient start */
+    --gradient-end: #e7d3b3; /* Cream gradient end */
 
-    --gradient-start: #9580ff;
-    --gradient-end: #80ffea;
-
-    --border-primary: #f1f5f9;
-    --border-secondary: #bed1e7;
-    --border-highlight: #64748b;
-    --border-tertiary: '';
-
-    --shadow-dark: '';
-    --shadow-light: '';
-    --shadow-text: '';
-
-    --padding-small: 1rem;
-    --padding-large: 2rem;
-
-    --border-radius-small: 0.5rem;
-    --border-radius-large: 0.75rem;
-    --highlight-border-radius: 0.5rem;
-
-    --text-selection: '';
+    --border-primary: #7d5e54; /* Brown border */
+    --border-secondary: #a38574; /* Lighter brown border */
+    --border-highlight: #5a3e36; /* Deep brown border for highlights */
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-primary: #05070f;
-        --background-secondary: #0e101e;
-        --background-tertiary: #121424;
-        --background-accent: '';
-        --background-compliment: '';
-        --background-gradient: '';
-        --background-muted: #1a1e32;
+        --background-primary: #2c1e1a; /* Dark cream */
+        --background-secondary: #3a2925; /* Darker cream for secondary background */
+        --background-tertiary: #4a3a35; /* Even darker cream for tertiary background */
+        --background-accent: #5e4541; /* Darker nude pink */
+        --background-muted: #1f1512; /* Muted dark cream */
 
-        --color-primary: white;
-        --color-secondary: '';
-        --color-tertiary: '';
-        --color-accent: '';
-        --color-compliment: '';
-        --color-gradient: '';
-        --color-muted: ;
-        --color-link: #60a5fa;
-        --color-link-transparent: rgba(37, 99, 235, 0.1);
+        --color-primary: #e0c9b9; /* Light brown for primary text */
+        --color-secondary: #bfa38c; /* Medium brown for secondary text */
+        --color-tertiary: #998070; /* Even lighter brown for tertiary text */
+        --color-accent: #ffb6b9; /* Softer nude pink accent */
+        --color-link: #ff7f7f; /* Nude pink for links */
+        --color-link-transparent: rgba(255, 182, 185, 0.1); /* Transparent pink */
 
-        --color-success: '';
-        --color-warning: '';
-        --color-error: '';
-        --color-info: '';
-        --color-highlight: #fef9c3;
+        --color-highlight: #d95d67; /* Pink highlight */
+        --gradient-start: #d95d67; /* Darker pink gradient start */
+        --gradient-end: #3a2925; /* Darker cream gradient end */
 
-        --gradient-start: #9580ff;
-        --gradient-end: #80ffea;
-
-        --border-primary: #29325b;
-        --border-secondary: #323c71;
-        --border-highlight: #4649af;
-        --border-tertiary: '';
-
-        --shadow-dark: '';
-        --shadow-light: '';
-        --shadow-text: '';
-
-        --padding-small: 1rem;
-        --padding-large: 2rem;
-
-        --border-radius-small: 0.5rem;
-        --border-radius-large: 0.75rem;
-        --highlight-border-radius: 0.5rem;
-
-        --text-selection: '';
+        --border-primary: #4a3a35; /* Lighter brown border */
+        --border-secondary: #5e4541; /* Darker pink border */
+        --border-highlight: #e0c9b9; /* Light brown border for highlights */
     }
 }
 
@@ -135,48 +87,18 @@ body {
     -webkit-box-decoration-break: clone;
 }
 
-
 /* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button {
+h1, h2, h3, h4, h5, h6, button {
     font-family: "Grenze", serif;
     width: fit-content;
 }
 
-h1 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-
-h3 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-}
-
-h4 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-}
-
-h5 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-
-h6 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-}
+h1 { font-size: 1.875rem; line-height: 2.25rem; }
+h2 { font-size: 1.5rem; line-height: 2rem; }
+h3 { font-size: 1.25rem; line-height: 1.75rem; }
+h4 { font-size: 1.125rem; line-height: 1.75rem; }
+h5 { font-size: 1rem; line-height: 1.5rem; }
+h6 { font-size: 0.875rem; line-height: 1.25rem; }
 
 p {
     display: block;
@@ -190,21 +112,14 @@ span {
 }
 
 /* Content Sectioning */
-
 main {}
-
 header {}
-
 footer {}
-
 nav {}
-
 section {}
-
 address {
     font-style: normal;
 }
-
 aside {
     float: right;
     width: 40%;
@@ -215,7 +130,6 @@ aside {
     background-color: var(--background-muted);
     border-radius: var(--border-radius-large);
 }
-
 
 /* Text Content */
 blockquote {
@@ -239,53 +153,30 @@ blockquote footer {
     padding-top: 1rem;
 }
 
-dd {
-    padding-bottom: 11px;
-}
-
+dd { padding-bottom: 11px; }
 dl {}
-
-dt {
-    font-weight: bold;
-}
-
+dt { font-weight: bold; }
 figure {}
-
-figcaption {
-    padding-top: 10px;
-    font-size: 0.8rem;
-}
-
+figcaption { padding-top: 10px; font-size: 0.8rem; }
 hr {}
 
-
-ul,
-ol {
+ul, ol {
     list-style-position: inside;
     padding-left: 1rem;
 }
 
-li {
-    line-height: 1.6em;
-}
+li { line-height: 1.6em; }
 
 /* Inline Text Elements */
-
 a {
     color: var(--color-link);
 }
 
-a:active,
-a:focus,
-a:hover {
+a:active, a:focus, a:hover {
     text-decoration: none;
 }
 
-mark,
-samp,
-kbd,
-code,
-time {
+mark, samp, kbd, code, time {
     border-radius: var(--highlight-border-radius, 4px);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
@@ -303,15 +194,13 @@ samp {
     color: var(--color-primary);
 }
 
-kbd,
-time {
+kbd, time {
     padding: 0rem 0.5rem;
     background-color: var(--background-muted);
     color: var(--color-primary);
 }
 
-code,
-pre {
+code, pre {
     font-size: 0.9em;
     padding: 0.2rem 0.5rem;
     background: var(--background-muted);
@@ -320,7 +209,7 @@ pre {
     overflow-x: auto;
 }
 
-pre>code {
+pre > code {
     padding: 10px;
     border: 0;
     display: block;
@@ -331,8 +220,7 @@ pre {
     border-radius: var(--border-radius-large);
 }
 
-sup,
-sub {
+sup, sub {
     line-height: normal;
 }
 
@@ -341,16 +229,12 @@ audio {
     width: 100%;
 }
 
-audio,
-img,
-video {
+audio, img, video {
     border-radius: var(--border-radius-large);
     max-width: 100%;
 }
 
-img {
-    height: auto;
-}
+img { height: auto; }
 
 /* Tables */
 table {
@@ -376,49 +260,24 @@ table tr:first-child th:last-child {
     border-top-right-radius: 8px;
 }
 
-th {
-    background-color: var(--background-muted);
-}
+th { background-color: var(--background-muted); }
+td { background: var(--background-primary); }
 
-td {
-    background: var(--background-primary);
-}
-
-td,
-th {
+td, th {
     text-align: left;
     padding: 8px;
 }
 
-thead {
-    border-collapse: collapse;
-}
+thead { border-collapse: collapse; }
+tfoot { border-top: 1px solid black; }
 
-tfoot {
-    border-top: 1px solid black;
-}
-
-table tr:hover td,
-tbody tr:nth-child(even):hover td {
+table tr:hover td, tbody tr:nth-child(even):hover td {
     background-color: var(--background-muted);
 }
 
 /* Form elements */
-input,
-button,
-select,
-optgroup,
-textarea {
-    /* margin: 0; */
-}
-
-button,
-select,
-input[type="submit"],
-input[type="button"],
-input[type="checkbox"],
-input[type="range"],
-input[type="radio"] {
+input, button, select, optgroup, textarea {}
+button, select, input[type="submit"], input[type="button"], input[type="checkbox"], input[type="range"], input[type="radio"] {
     cursor: pointer;
 }
 
@@ -446,8 +305,7 @@ button[disabled]:hover {
     transform: translate(0, 0);
 }
 
-button:disabled,
-button[disabled] {
+button:disabled, button[disabled] {
     border: 1.5px solid var(--border-secondary);
     cursor: initial;
     opacity: 0.55;
@@ -459,9 +317,7 @@ label {
     font-weight: 500;
 }
 
-input,
-textarea,
-select {
+input, textarea, select {
     font-size: 1em;
     background-color: var(--background-muted);
     border: 1px solid var(--border-secondary);
@@ -469,7 +325,6 @@ select {
     padding: 0.5rem 0.75rem;
     border-radius: var(--border-radius-small);
     width: 100%;
-    /* max-width: fit-content; */
     outline: none;
     appearance: none;
 }
@@ -494,15 +349,12 @@ input[type="number"].buttonless::-webkit-outer-spin-button {
     margin: 0;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
     padding: 0.5rem;
     width: fit-content;
     vertical-align: middle;
     position: relative;
     margin: 0.5rem 0.25rem 0.5rem 0.5rem;
-    /* margin-right: 0.33em;
-    margin-top: 0.31em; */
 }
 
 input[type="checkbox"] {
@@ -514,8 +366,7 @@ input[type="radio"] {
     border-radius: 100%;
 }
 
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
+input[type="checkbox"]:checked, input[type="radio"]:checked {
     background: var(--border-secondary);
 }
 
@@ -539,17 +390,11 @@ select:is([multiple]) {
     height: fit-content;
 }
 
-fieldset:focus-within,
-input:focus-within,
-textarea:focus-within,
-select:focus-within {
+fieldset:focus-within, input:focus-within, textarea:focus-within, select:focus-within {
     border-color: var(--border-highlight);
 }
 
-fieldset:hover,
-input:hover,
-textarea:hover,
-select:hover {
+fieldset:hover, input:hover, textarea:hover, select:hover {
     border-color: var(--border-highlight);
 }
 
@@ -600,8 +445,7 @@ details[open] summary {
     margin-bottom: 0.5rem;
 }
 
-.card,
-.button-card {
+.card, .button-card {
     background-color: var(--background-muted);
     color: var(--color-primary);
     padding: 1rem;
@@ -626,8 +470,7 @@ details[open] summary {
     border-color: var(--border-highlight);
 }
 
-.card-button-primary,
-.card-button-secondary {
+.card-button-primary, .card-button-secondary {
     border: none !important;
     box-shadow: none !important;
 }
@@ -642,12 +485,10 @@ details[open] summary {
     background: var(--color-link-transparent);
 }
 
-.card-button-primary:hover,
-.card-button-secondary:hover {
+.card-button-primary:hover, .card-button-secondary:hover {
     transform: none;
     opacity: 0.6;
 }
-
 
 @media (min-width: 640px) {
     body {
@@ -655,41 +496,13 @@ details[open] summary {
         line-height: 1.5rem;
     }
 
-    h1 {
-        font-size: 2.25rem;
-        line-height: 2.5rem;
-    }
+    h1 { font-size: 2.25rem; line-height: 2.5rem; }
+    h2 { font-size: 1.875rem; line-height: 2.25rem; }
+    h3 { font-size: 1.5rem; line-height: 2rem; }
+    h4 { font-size: 1.25rem; line-height: 1.75rem; }
+    h5 { font-size: 1.125rem; line-height: 1.75rem; }
+    h6 { font-size: 1rem; line-height: 1.5rem; }
 
-    h2 {
-        font-size: 1.875rem;
-        line-height: 2.25rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-
-    h4 {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
-
-    h5 {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-    }
-
-    h6 {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    button {
-        width: fit-content;
-    }
-
-    input {
-        max-width: 600px;
-    }
+    button { width: fit-content; }
+    input { max-width: 600px; }
 }
