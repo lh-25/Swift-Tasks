@@ -82,7 +82,7 @@ body {
 .text-gradient {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, var(--gradient-start) 0, var(--gradient-end) 100%);
+    background-image: linear-gradient(135deg, #7d5e54 0%, #d95d67 100%); /* Adjusted for more contrast */
     background-size: 100%;
     -webkit-box-decoration-break: clone;
 }
