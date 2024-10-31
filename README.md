@@ -5,7 +5,6 @@ A sleek, user-friendly task management app built with **React** and **Vite**, en
 ## Features
 
 - **Task Management**: Easily add, delete, and manage task lists.
-- **Task Prioritization**: Sort and focus on high-priority tasks.
 - **Customizable Status Updates**: Track and update task progress.
 - **Local Storage**: Data is saved to localStorage, ensuring tasks are preserved even when the app is closed.
 - **Responsive Design**: Optimized for a seamless experience across devices.
@@ -52,6 +51,7 @@ To set up and run this project locally:
 ## Future Development
 
 Planned features include:
+- **Task Prioritization**: Sort and focus on high-priority tasks.
 - **Task Editing**: Allow users to modify task details, including deadlines and priorities.
 - **Due Date Tracking**: Integrate a due date function for more effective scheduling.
 - **Enhanced Reminders**: Visual reminders for tasks with upcoming deadlines.
