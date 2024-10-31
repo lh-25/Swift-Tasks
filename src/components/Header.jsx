@@ -1,13 +1,15 @@
 export function Header (props) {
-const { todos } = props
-const todosLength = todos.length
+const { todos, openTaskCount} = props
 
 const isTasksPlural = todos.length != 1
 
 const taskOrTasks = isTasksPlural? 'tasks' : 'task'
   return (
     <header>
-      <h1 className="text-gradient">You have a {todosLength} open {taskOrTasks}.</h1>
+      <h1 className="text-gradient">Swift Tasks</h1>
+      <br />
+      <h2 className="text-gradient"> You have {openTaskCount > 0 ?
+      ` ${openTaskCount} open ${taskOrTasks}.` : 'no open tasks' }</h2>
     </header>
   )
 }

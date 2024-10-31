@@ -4,20 +4,15 @@ import { Tabs } from "./components/Tabs"
 import { TodoInput } from "./components/TodoInput"
 import { TodoList } from "./components/TodoList"
 
-function App() {
-  // const todos = [
-  //  { input: 'Hello! Add your first todo!', complete: true } 
-  //   { input: 'Get the groceries!', complete: false },
-  //   { input: 'Learn how to web design', complete: false },
-  //   { input: 'Say hi to gran gran', complete: true },
-  // ]
-
+export default function  App () {
 
   const [todos, setTodos] = useState([
-     { input: 'Hello! Add your first todo!', complete: true }
+     { input: 'Hello! Add your first todo!', complete: false }
   ])
 
-  const [selectedTab, setSelectedTab] = useState('Open')
+  const [selectedTab, setSelectedTab] = useState('All')
+
+const openTaskCount = todos.filter((todo) => !todo.complete).length
 
  const handleAddTodo = (newTodo) => {
   const newTodoList = [...todos, {input: newTodo, complete: false}]
@@ -56,7 +51,7 @@ const handleSavaData = (currTodos) => {
   return (
     <>
 
-      <Header todos={todos} />
+      <Header openTaskCount={openTaskCount}todos={todos} />
       <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} todos={todos} />
       <TodoList handleCompleteTodo={handleCompleteTodo} handleDeleteTodo={handleDeleteTodo} selectedTab={selectedTab} todos={todos} />
       <TodoInput handleAddTodo={handleAddTodo}/>
@@ -65,4 +60,4 @@ const handleSavaData = (currTodos) => {
   )
 }
 
-export default App
+
